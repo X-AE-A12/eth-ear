@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/yaneshcode/eth-ear/issues"
   },
-  "homepage": "https://github.com/yaneshcode/eth-ear#readme"
+  "homepage": "https://github.com/yaneshcode/eth-ear#readme",
+  "dependencies": {
+    "ethers": "^4.0.27"
+  }
 }
