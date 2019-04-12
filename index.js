@@ -22,3 +22,7 @@ function eventListener(eventName, contractAddress, abi, network) {
     });
   })();
 }
+
+module.exports = {
+  eventListener
+}
