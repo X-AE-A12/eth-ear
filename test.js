@@ -229,4 +229,10 @@ let abi = [
 // contract address
 let contractAddress = "0x2002D3812F58e35F0EA1fFbf80A75a38c32175fA";
 
-ear.eventListener('Transfer', contractAddress, abi, 'kovan');
+let eventParams = [
+  "from",
+  "to",
+  "amount"
+]
+
+ear.eventListener('Transfer', eventParams, contractAddress, abi, 'kovan');
