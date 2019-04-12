@@ -4,6 +4,9 @@ function eventListener(eventName, contractAddress, abi, network) {
   let provider = new ethers.getDefaultProvider(network);
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
+  console.log("Listening to event \'" + eventName +
+    "\' on contract " + contractAddress +
+    " on the " + network + " network: \n");
 
   (async function() {
     let transferEvent = new Promise((resolve, reject) => {
