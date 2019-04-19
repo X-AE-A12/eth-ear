@@ -9,8 +9,7 @@ npm i eth-ear
 
 ## Methods
 
-eventListener(eventName, contractAddress, contractABI, networkName)
-
+transferListener(contractAddress, contractABI, networkName)
 
 ### Tests
 
