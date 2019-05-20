@@ -15,6 +15,7 @@ const ear = require('eth-ear');
 
 // Call Methods
 ear.transferListener("0x0", [{...}], "kovan")
+```
 
 ### Methods
 
