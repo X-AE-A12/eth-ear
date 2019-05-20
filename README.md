@@ -1,17 +1,34 @@
 # eth-ear
-NPM module for an ethereum blockchain event and transaction listener, using ethers.js.
+NPM module for an ethereum blockchain event and transaction listener.
 
-## Installation
+### Installation
 
 ```
 npm i eth-ear
 ```
 
-## Methods
+### Usage
+
+```
+// Import
+const ear = require('eth-ear');
+
+// Call Methods
+ear.transferListener("0x0", [{...}], "kovan")
+
+### Methods
+
+ERC-20 Events:
 
 transferListener(contractAddress, contractABI, networkName)
 
-### Tests
+<!-- approvalListener(contractAddress, contractABI, networkName)
+
+Transactions:
+
+transactionListener() -->
+
+#### Tests
 
 ```
 npm test
@@ -19,9 +36,9 @@ npm test
 
 Test: Listening to ZRX token transfer event on the Kovan network.
 
-### Dependencies
+#### Dependencies
 - [ethers](https://www.npmjs.com/package/ethers)
 
-### License
+#### License
 
 MIT
