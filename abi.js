@@ -1,9 +1,5 @@
-// 0x contract transfer event listener on Kovan
-
-const ear = require('./index.js');
-
 // ERC 20 interface
-let abi = [
+module.exports = [
     {
         "constant": true,
         "inputs": [],
@@ -225,8 +221,3 @@ let abi = [
         "type": "event"
     }
 ];
-
-// contract address
-let contractAddress = "0x2002D3812F58e35F0EA1fFbf80A75a38c32175fA";
-
-ear.transferListener(contractAddress, abi, 'kovan');
