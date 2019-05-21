@@ -24,7 +24,7 @@ function approvalListener(contractAddress, abi, network) {
   let provider = new ethers.getDefaultProvider(network);
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
-  console.log("Listening to event 'Approve' on contract " + contractAddress +
+  console.log("Listening to event 'Approval' on contract " + contractAddress +
     " on the " + network + " network: \n");
 
   (async function() {
