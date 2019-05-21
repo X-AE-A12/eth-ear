@@ -1,10 +1,10 @@
 {
   "name": "eth-ear",
-  "version": "1.0.4",
-  "description": "Ethereum blockchain event and transaction listener",
+  "version": "1.0.5",
+  "description": "Ethereum blockchain event and transaction listener.",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test/testDAI.js"
   },
   "repository": {
     "type": "git",
