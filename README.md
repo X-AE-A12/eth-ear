@@ -14,7 +14,7 @@ npm i eth-ear
 const ear = require('eth-ear');
 
 // Call Methods
-ear.transferListener("0x0", [{...}], "kovan")
+ear.transferListener("0x0", [{abi...}], "kovan")
 ```
 
 ### Methods
@@ -23,8 +23,9 @@ ERC-20 Events:
 
 transferListener(contractAddress, contractABI, networkName)
 
-<!-- approvalListener(contractAddress, contractABI, networkName)
+approvalListener(contractAddress, contractABI, networkName)
 
+<!-- 
 Transactions:
 
 transactionListener() -->

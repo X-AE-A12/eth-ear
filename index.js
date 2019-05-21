@@ -20,8 +20,29 @@ function transferListener(contractAddress, abi, network) {
   })();
 }
 
+function approvalListener(contractAddress, abi, network) {
+  let provider = new ethers.getDefaultProvider(network);
+  let contract = new ethers.Contract(contractAddress, abi, provider);
+
+  console.log("Listening to event 'Approve' on contract " + contractAddress +
+    " on the " + network + " network: \n");
+
+  (async function() {
+    new Promise((resolve, reject) => {
+
+      contract.on('Approval', (owner, spender, amount) => {
+        console.log("Owner  : " + owner);
+        console.log("Spender: " + spender);
+        console.log("Amount : " + amount);
+        console.log("\n");
+      });
+    });
+  })();
+}
+
 module.exports = {
-  transferListener
+  transferListener,
+  approvalListener
 }
 
 // TODO:
