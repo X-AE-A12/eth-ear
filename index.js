@@ -42,7 +42,7 @@ function approvalListener(contractAddress, abi, network) {
   })();
 }
 
-// Transaction hash listener
+// Transaction listener
 function transactionListener(txHash, network) {
   let provider = new ethers.getDefaultProvider(network);
 
@@ -50,8 +50,9 @@ function transactionListener(txHash, network) {
     " on the " + network + " network: \n");
 
   (async () => {
-    let receipt = await provider.waitForTransaction(transactionHash.hash);
+    let receipt = await provider.waitForTransaction(txHash);
     console.log('Transaction Mined: ' + receipt.transactionHash);
+    console.log('Transaction Receipt:');
     console.log(receipt);
   })();
 }
