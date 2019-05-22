@@ -1,5 +1,6 @@
 const ethers = require('ethers');
 
+// ERC-20 transfer event
 function transferListener(contractAddress, abi, network) {
   let provider = new ethers.getDefaultProvider(network);
   let contract = new ethers.Contract(contractAddress, abi, provider);
@@ -20,6 +21,7 @@ function transferListener(contractAddress, abi, network) {
   })();
 }
 
+// ERC-20 approval event
 function approvalListener(contractAddress, abi, network) {
   let provider = new ethers.getDefaultProvider(network);
   let contract = new ethers.Contract(contractAddress, abi, provider);
@@ -40,9 +42,24 @@ function approvalListener(contractAddress, abi, network) {
   })();
 }
 
+// Transaction hash listener
+function transactionListener(txHash, network) {
+  let provider = new ethers.getDefaultProvider(network);
+
+  console.log("Listening to transaction " + txHash +
+    " on the " + network + " network: \n");
+
+  (async () => {
+    let receipt = await provider.waitForTransaction(transactionHash.hash);
+    console.log('Transaction Mined: ' + receipt.transactionHash);
+    console.log(receipt);
+  })();
+}
+
 module.exports = {
   transferListener,
-  approvalListener
+  approvalListener,
+  transactionListener,
 }
 
 // TODO:
