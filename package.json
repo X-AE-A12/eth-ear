@@ -4,7 +4,11 @@
   "description": "Ethereum blockchain event and transaction listener.",
   "main": "index.js",
   "scripts": {
-    "test": "node test/testDAI.js"
+    "test": "node test/testDAI.js",
+    "testDAI": "node test/testDAI.js",
+    "testZRX" : "node test/testZRX.js",
+    "testUSDT" : "node test/testUSDT.js",
+    "testTx" : "node test/testTx.js"
   },
   "repository": {
     "type": "git",

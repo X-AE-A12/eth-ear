@@ -29,15 +29,29 @@ Transactions:
 
 #### Tests
 
+Listening to DAI token transfer event on the Main network.
 ```
 npm test
 ```
 
-Test: Listening to ZRX token transfer event on the Kovan network.
+Additional Tests:
+```
+// DAI token transfer event on Mainnet
+npm run testDAI
 
-#### Dependencies
+// 0x token transfer event on Kovan
+npm run testZRX
+
+// Tether token approval event on Mainnet
+npm run testUSDT
+
+// Transaction hash listener on Kovan
+npm run testTx
+```
+
+### Dependencies
 - [ethers](https://www.npmjs.com/package/ethers)
 
-#### License
+### License
 
 MIT
