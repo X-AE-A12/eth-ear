@@ -20,12 +20,12 @@ ear.transferListener("0x0", [{abi...}], "kovan")
 ### Methods
 
 ERC-20 Events:
--transferListener(contractAddress, contractABI, networkName)
--approvalListener(contractAddress, contractABI, networkName)
+- transferListener(contractAddress, contractABI, networkName)
+- approvalListener(contractAddress, contractABI, networkName)
 
 
 Transactions:
--transactionListener(transactionHash, networkName)
+- transactionListener(transactionHash, networkName)
 
 #### Tests
 
