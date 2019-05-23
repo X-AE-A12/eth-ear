@@ -27,9 +27,9 @@ ERC-20 Events:
 Transactions:
 - transactionListener(transactionHash, networkName)
 
-#### Tests
+### Tests
 
-Listening to DAI token transfer event on the Main network.
+Listening to DAI token transfer event on the Main network:
 ```
 npm test
 ```
